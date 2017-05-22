@@ -1,4 +1,4 @@
-#~/bin/bash
+#!/bin/bash
 
 echo -e "listing files [1]\t\tgit [2]\t\tAUR install [3\t\tmount external [4]\t\tmount MacBook [5]"
 
