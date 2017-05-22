@@ -6,18 +6,30 @@ read option
 if [ $option -eq 1 ]; then
 	echo "du -sh *"
 elif [ $option -eq 2 ]; then
-	echo "save local changes and push them to server"
-	echo "git add -A"
-	echo "gi commit -m "what are the lastest changes""
-	echo "git push"
-	echo " "
-	echo "create copy of current branch and call it feature1"
-	echo "git branch feature1"
-	echo " "
-	echo "switch to branch feature1"
-	echo "git checkout feature1"
-	echo " "
-	echo "More Info: http://tutorialzine.com/2016/06/learn-git-in-30-minutes/"
+	echo -e "save and commit changes [1]\t\t create branch [2]\t\t switch branch [3]\t\tcreate repo [4]\t\tmore info [5]"
+	read gitOption
+	if [ $gitOption -eq 1 ]; then
+		echo "save local changes and push them to server"
+		echo "git add -A"
+		echo "gi commit -m "what are the lastest changes""
+		echo "git push"
+	elif [ $gitOption -eq 2 ]; then
+		echo "create copy of current branch and call it feature1"
+		echo "git branch feature1"
+	elif [ $gitOption -eq 3 ]; then
+		echo "switch to branch feature1"
+		echo "git checkout feature1"
+	elif [ $gitOption -eq 4 ]; then
+		echo "git init"
+		echo "vi README.md"
+		echo "git add ."
+		echo "git commit -m \" First commit\""
+		echo "git remote add origin *remote repository URL*"
+		echo "git remote -v -> verifies new remote URL"
+		echo "git push -u origin master"
+	elif [ $gitOption -eq 5 ]; then
+		echo "More Info: http://tutorialzine.com/2016/06/learn-git-in-30-minutes/"
+	fi
 elif [ $option -eq 3 ]; then
 	echo "Download snapshot link"
 	echo "wget https://aur.archlinux.org/cgit/aur.git/snapshot/dropbox.tar.gz"
