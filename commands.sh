@@ -1,12 +1,12 @@
 #!/bin/bash
 
-echo -e "listing files [1]\t\tgit [2]\t\tAUR install [3\t\tmount external [4]\t\tmount MacBook [5]"
+echo -e "listing files [1]\ngit [2]\nAUR install [3]\nmount external [4]\nmount MacBook [5]"
 
 read option
 if [ $option -eq 1 ]; then
 	echo "du -sh *"
 elif [ $option -eq 2 ]; then
-	echo -e "save and commit changes [1]\t\t create branch [2]\t\t switch branch [3]\t\tcreate repo [4]\t\tmore info [5]"
+	echo -e "\tsave and commit changes [1]\n\tcreate branch [2]\n\tswitch branch [3]\n\tcreate repo [4]\ndiscard any local commits [5]\n\tmore info [6]"
 	read gitOption
 	if [ $gitOption -eq 1 ]; then
 		echo "save local changes and push them to server"
@@ -28,6 +28,9 @@ elif [ $option -eq 2 ]; then
 		echo "git remote -v -> verifies new remote URL"
 		echo "git push -u origin master"
 	elif [ $gitOption -eq 5 ]; then
+		echo "git checkout master"
+		echo git reset --hard origin/master"
+	elif [ $gitOption -eq 6 ]; then
 		echo "More Info: http://tutorialzine.com/2016/06/learn-git-in-30-minutes/"
 	fi
 elif [ $option -eq 3 ]; then

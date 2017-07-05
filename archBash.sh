@@ -1,7 +1,6 @@
 #!/bin/bash
-cd GitHub/quickRef
+cd ~/GitHub/quickRef
 
-for my arch
 PS1="\d \A \u:\h\$(pwd) $"
 alias ll='ls -l'
 alias la='ls -la'
