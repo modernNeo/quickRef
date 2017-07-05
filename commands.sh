@@ -6,7 +6,7 @@ read option
 if [ $option -eq 1 ]; then
 	echo "du -sh *"
 elif [ $option -eq 2 ]; then
-	echo -e "\tsave and commit changes [1]\n\tcreate branch [2]\n\tswitch branch [3]\n\tcreate repo [4]\ndiscard any local commits [5]\n\tmore info [6]"
+	echo -e "\tsave and commit changes [1]\n\tcreate branch [2]\n\tswitch branch [3]\n\tcreate repo [4]\n\tdiscard any local commits [5]\n\tmore info [6]"
 	read gitOption
 	if [ $gitOption -eq 1 ]; then
 		echo "save local changes and push them to server"
@@ -29,7 +29,7 @@ elif [ $option -eq 2 ]; then
 		echo "git push -u origin master"
 	elif [ $gitOption -eq 5 ]; then
 		echo "git checkout master"
-		echo git reset --hard origin/master"
+		echo "git reset --hard origin/master"
 	elif [ $gitOption -eq 6 ]; then
 		echo "More Info: http://tutorialzine.com/2016/06/learn-git-in-30-minutes/"
 	fi
