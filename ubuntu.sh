@@ -1,5 +1,4 @@
 #!/bin/bash
-cd ~/GitHub/quickRef/
 
 PS1="\d \A \u:\h\$(pwd) $"
 #alias ll='ls -l'
@@ -9,7 +8,8 @@ alias l='ls -alF'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias vi='vim'
+
+cd ~/GitHub/quickRef/
 dir=`pwd`
 alias commands='$dir/commands.sh'
-
 cd ~/
