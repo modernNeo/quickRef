@@ -21,9 +21,9 @@ elif [ $option -eq 2 ]; then
 		echo "git checkout feature1"
 	elif [ $gitOption -eq 4 ]; then
 		echo "git init"
-		git config user.name "Jace Manshadi"
-		git comfig user.email "j_manshad@sfu.ca"
-		echo "# <repo_name>" >> README.md
+		echo "git config user.name \"Jace Manshadi\""
+		echo "git config user.email \"j_manshad@sfu.ca\""
+		echo "# <repo_name> >> README.md"
 		echo "git add ."
 		echo "git commit -m \" First commit\""
 		echo "git remote add origin *remote repository URL*"
