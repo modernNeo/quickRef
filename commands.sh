@@ -28,7 +28,7 @@ elif [ $option -eq 2 ]; then
 		echo "git commit -m \" First commit\""
 		echo "git remote add origin *remote repository URL*"
 		echo "git remote -v -> verifies new remote URL"
-		echo "git push"
+		echo "git push -u origin master"
 	elif [ $gitOption -eq 5 ]; then
 		echo "git checkout master"
 		echo "git reset --hard origin/master"
