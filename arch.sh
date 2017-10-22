@@ -1,5 +1,3 @@
-#!/bin/bash
-
 PS1="\d \A \u:\h\$(pwd) $"
 alias ll='ls -l'
 alias la='ls -la'
