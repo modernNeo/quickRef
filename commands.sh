@@ -6,7 +6,7 @@ read option
 if [ $option -eq 1 ]; then
 	echo "du -sh *"
 elif [ $option -eq 2 ]; then
-	echo -e "\tsave and commit changes [1]\n\tcreate branch [2]\n\tswitch branch [3]\n\tcreate repo [4]\n\tdiscard any local commits [5]\n\tmore info [6]"
+	echo -e "\tsave and commit changes [1]\n\tcreate branch [2]\n\tswitch branch [3]\n\tcreate repo [4]\n\tdiscard any local commits [5]\n\tgit cleaning [6]\n\tmore info [7]"
 	read gitOption
 	if [ $gitOption -eq 1 ]; then
 		echo "save local changes and push them to server"
@@ -33,6 +33,9 @@ elif [ $option -eq 2 ]; then
 		echo "git checkout master"
 		echo "git reset --hard origin/master"
 	elif [ $gitOption -eq 6 ]; then
+		echo "git clean -d -x -f"
+		echo "will remove untracked files, including directories (-d) and files ignored by git (-x). Replace the -f argument with -n to perform a dry-run or -i for interactive mode and it will tell you what will be removed."
+	elif [ $gitOption -eq 7 ]; then
 		echo "More Info: http://tutorialzine.com/2016/06/learn-git-in-30-minutes/"
 	fi
 elif [ $option -eq 3 ]; then
