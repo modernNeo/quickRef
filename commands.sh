@@ -35,6 +35,7 @@ elif [ $option -eq 2 ]; then
 	elif [ $gitOption -eq 6 ]; then
 		echo "git clean -d -x -f"
 		echo "will remove untracked files, including directories (-d) and files ignored by git (-x). Replace the -f argument with -n to perform a dry-run or -i for interactive mode and it will tell you what will be removed."
+		echo "https://stackoverflow.com/a/675797"
 	elif [ $gitOption -eq 7 ]; then
 		echo "More Info: http://tutorialzine.com/2016/06/learn-git-in-30-minutes/"
 	fi
