@@ -52,7 +52,7 @@ elif [ $option -eq 4 ]; then
 elif [ $option -eq 5 ]; then
 	echo "sudo mount -t cifs //192.168.1.64/Macintosh\ HD /mnt/jason-macbook -o user="Jason Manshad""
 elif [ $option -eq 6 ]; then
-	/mnt/c/Users/Jason\ Manshad/GitHub/quickRef/connect_usb.sh
+	~/GitHub/quickRef/connect_usb.sh
 fi
 
 
