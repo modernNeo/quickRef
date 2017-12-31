@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "listing files [1]\ngit [2]\nAUR install [3]\nmount external [4]\nmount MacBook [5]"
+echo -e "listing files [1]\ngit [2]\nAUR install [3]\nmount external [4]\nmount MacBook [5]\nMount USB to WSL[6]"
 
 read option
 if [ $option -eq 1 ]; then
@@ -51,6 +51,8 @@ elif [ $option -eq 4 ]; then
 	echo "sudo mount UUID=5b09bc13-41e4-350f-b021-e1c5e59940fb /mnt/jason-hard_drive/"
 elif [ $option -eq 5 ]; then
 	echo "sudo mount -t cifs //192.168.1.64/Macintosh\ HD /mnt/jason-macbook -o user="Jason Manshad""
+elif [ $option -eq 6 ]; then
+	/mnt/c/Users/Jason\ Manshad/GitHub/quickRef/connect_usb.sh
 fi
 
 
