@@ -11,3 +11,4 @@ cd ~/GitHub/quickRef
 dir=`pwd`
 alias commands='$dir/commands.sh'
 cd ~/
+echo "colorscheme desert" >> ~/.vimrc
