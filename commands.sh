@@ -6,7 +6,7 @@ read option
 if [ $option -eq 1 ]; then
 	echo "du -sh *"
 elif [ $option -eq 2 ]; then
-	echo -e "\tsave and commit changes [1]\n\tcreate branch [2]\n\tswitch branch [3]\n\tcombo of above 2 commands [4]\n\tconfig git user name and email [5]\n\tgit add repo url [6]\n\tverify git url [7]\n\tset origin\\branch for upstream [8]\n\tgit create repo [9]\n\tdiscard any local commits [10]\n\tdeleting branch [11]\n\tgit cleaning [12]\n\tmore info [13]"
+	echo -e "\tsave and commit changes [1]\n\tcreate branch [2]\n\tswitch branch [3]\n\tcombo of above 2 commands [4]\n\tconfig git user name and email [5]\n\tgit add repo url [6]\n\tverify git url [7]\n\tset origin\\\\branch for upstream [8]\n\tgit create repo [9]\n\tdiscard any local commits [10]\n\tdeleting branch [11]\n\tgit cleaning [12]\n\tmore info [13]"
 	read gitOption
 	if [ $gitOption -eq 1 ]; then
 		echo "save local changes and push them to server"
