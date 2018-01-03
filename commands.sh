@@ -6,7 +6,7 @@ read option
 if [ $option -eq 1 ]; then
 	echo "du -sh *"
 elif [ $option -eq 2 ]; then
-	echo -e "\tsave and commit changes [1]\n\tcreate branch [2]\n\tswitch branch [3]\n\tcreate repo [4]\n\tdiscard any local commits [5]\n\tgit cleaning [6]\n\tmore info [7]"
+	echo -e "\tsave and commit changes [1]\n\tcreate branch [2]\n\tswitch branch [3]\n\tcombo of above 2 commands [4]\n\tconfig git user name and email[5]\n\tgit add repo url[6]\n\tverify git url[7]\n\tset origin\\branch for upstream[8]\n\tgit create repo [9]\n\tdiscard any local commits [10]\n\tgit cleaning [11]\n\tmore info [12]"
 	read gitOption
 	if [ $gitOption -eq 1 ]; then
 		echo "save local changes and push them to server"
@@ -18,8 +18,24 @@ elif [ $option -eq 2 ]; then
 		echo "git branch feature1"
 	elif [ $gitOption -eq 3 ]; then
 		echo "switch to branch feature1"
-		echo "git checkout feature1"
-	elif [ $gitOption -eq 4 ]; then
+		echo "git checkout feature1"i
+        elif [ $gitOption -eq 4 ]; then
+                echo "combination of above 2 actions"
+                echo "git checkout -b <new_branch_name>"
+	elif [ $gitOption -eq 5 ]; then
+		echo "config singular repo"
+		echo "git config --local user.name \"Jace Manshadi\""
+		echo "git config -local user.email \"j_manshad@sfu.ca\""
+		echo "config all repos"
+		echo "git config --global user.name \"Jace Manshadi\""
+		echo "git config --global user.email \"j_manshad@sfu.ca\""
+	elif [ $gitOption -eq 6 ]; then
+		echo "git remote add origin *remote repository URL*"
+	elif [ $gitOption -eq 7 ]; then
+		 echo "git remote -v -> verifies new remote URL"
+	elif [ $gitOption -eq 8 ]; then
+		echo "git branch --set-upstream-to origin/branch"
+	elif [ $gitOption -eq 9 ]; then
 		echo "git init"
 		echo "git config --local user.name \"Jace Manshadi\""
 		echo "git config -local user.email \"j_manshad@sfu.ca\""
@@ -29,14 +45,14 @@ elif [ $option -eq 2 ]; then
 		echo "git remote add origin *remote repository URL*"
 		echo "git remote -v -> verifies new remote URL"
 		echo "git push -u origin master"
-	elif [ $gitOption -eq 5 ]; then
+	elif [ $gitOption -eq 10 ]; then
 		echo "git checkout master"
 		echo "git reset --hard origin/master"
-	elif [ $gitOption -eq 6 ]; then
+	elif [ $gitOption -eq 11 ]; then
 		echo "git clean -d -x -f"
 		echo "will remove untracked files, including directories (-d) and files ignored by git (-x). Replace the -f argument with -n to perform a dry-run or -i for interactive mode and it will tell you what will be removed."
 		echo "https://stackoverflow.com/a/675797"
-	elif [ $gitOption -eq 7 ]; then
+	elif [ $gitOption -eq 12 ]; then
 		echo "More Info: http://tutorialzine.com/2016/06/learn-git-in-30-minutes/"
 	fi
 elif [ $option -eq 3 ]; then
