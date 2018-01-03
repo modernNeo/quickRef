@@ -6,7 +6,7 @@ read option
 if [ $option -eq 1 ]; then
 	echo "du -sh *"
 elif [ $option -eq 2 ]; then
-	echo -e "\tsave and commit changes [1]\n\tcreate branch [2]\n\tswitch branch [3]\n\tcombo of above 2 commands [4]\n\tconfig git user name and email[5]\n\tgit add repo url[6]\n\tverify git url[7]\n\tset origin\\branch for upstream[8]\n\tgit create repo [9]\n\tdiscard any local commits [10]\n\tgit cleaning [11]\n\tmore info [12]"
+	echo -e "\tsave and commit changes [1]\n\tcreate branch [2]\n\tswitch branch [3]\n\tcombo of above 2 commands [4]\n\tconfig git user name and email [5]\n\tgit add repo url [6]\n\tverify git url [7]\n\tset origin\\branch for upstream [8]\n\tgit create repo [9]\n\tdiscard any local commits [10]\n\tdeleting branch [11]\n\tgit cleaning [12]\n\tmore info [13]"
 	read gitOption
 	if [ $gitOption -eq 1 ]; then
 		echo "save local changes and push them to server"
@@ -49,10 +49,13 @@ elif [ $option -eq 2 ]; then
 		echo "git checkout master"
 		echo "git reset --hard origin/master"
 	elif [ $gitOption -eq 11 ]; then
+		echo "git branch -D <local_branch>"
+		echo "git push origin --delete <remote_branch>"
+	elif [ $gitOption -eq 12 ]; then
 		echo "git clean -d -x -f"
 		echo "will remove untracked files, including directories (-d) and files ignored by git (-x). Replace the -f argument with -n to perform a dry-run or -i for interactive mode and it will tell you what will be removed."
 		echo "https://stackoverflow.com/a/675797"
-	elif [ $gitOption -eq 12 ]; then
+	elif [ $gitOption -eq 13 ]; then
 		echo "More Info: http://tutorialzine.com/2016/06/learn-git-in-30-minutes/"
 	fi
 elif [ $option -eq 3 ]; then
