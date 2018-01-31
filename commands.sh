@@ -40,7 +40,7 @@ elif [ $option -eq 2 ]; then
 	elif [ $gitOption -eq 8 ]; then
 		echo "combination of above 2 actions"
 		echo "git checkout -b <new_branch_name>"
-	if [ $gitOption -eq 9 ]; then
+	elif [ $gitOption -eq 9 ]; then
 		echo "save local changes and push them to server"
 		echo "git add -A"
 		echo "gi commit -m "what are the lastest changes""
@@ -76,7 +76,3 @@ elif [ $option -eq 5 ]; then
 elif [ $option -eq 6 ]; then
 	~/GitHub/quickRef/connect_usb.sh
 fi
-
-
-
-
