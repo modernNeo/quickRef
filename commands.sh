@@ -8,20 +8,16 @@ if [ $option -eq 1 ]; then
 elif [ $option -eq 2 ]; then
 	echo -e "\tCreate a repo [1]\n\t\tConfig git user name and email [2]\n\t\tGit add repo url [3]\n\t\tVerify git url [4]\n\t\tSet origin\\\\branch for upstream [5]\n\tCreate branch [6]\n\tSwitch branch  [7]\n\tCombo of above 2 commands [8]\n\tSave and commit changes [9]\n\tPull a single file from server repo [10]\n\tdiscard any local commits [11]\n\tdeleting branch [12]\n\tgit cleaning [13]\n\tmore info [14]"
 	read gitOption
-	if [ $gitOption -eq 9 ]; then
-		echo "save local changes and push them to server"
-		echo "git add -A"
-		echo "gi commit -m "what are the lastest changes""
-		echo "git push"
-	elif [ $gitOption -eq 6 ]; then
-		echo "create copy of current branch and call it feature1"
-		echo "git branch feature1"
-	elif [ $gitOption -eq 7 ]; then
-		echo "switch to branch feature1"
-		echo "git checkout feature1"
-	elif [ $gitOption -eq 8 ]; then
-		echo "combination of above 2 actions"
-		echo "git checkout -b <new_branch_name>"
+	if [ $gitOption -eq 1 ]; then
+		echo "git init"
+		echo "git config --local user.name \"Jace Manshadi\""
+		echo "git config -local user.email \"j_manshad@sfu.ca\""
+		echo "# <repo_name> >> README.md"
+		echo "git add ."
+		echo "git commit -m \" First commit\""
+		echo "git remote add origin *remote repository URL*"
+		echo "git remote -v -> verifies new remote URL"
+		echo "git push -u origin master"
 	elif [ $gitOption -eq 2 ]; then
 		echo "config singular repo"
 		echo "git config --local user.name \"Jace Manshadi\""
@@ -35,16 +31,20 @@ elif [ $option -eq 2 ]; then
 		 echo "git remote -v -> verifies new remote URL"
 	elif [ $gitOption -eq 5 ]; then
 		echo "git branch --set-upstream-to origin/branch"
-	elif [ $gitOption -eq 1 ]; then
-		echo "git init"
-		echo "git config --local user.name \"Jace Manshadi\""
-		echo "git config -local user.email \"j_manshad@sfu.ca\""
-		echo "# <repo_name> >> README.md"
-		echo "git add ."
-		echo "git commit -m \" First commit\""
-		echo "git remote add origin *remote repository URL*"
-		echo "git remote -v -> verifies new remote URL"
-		echo "git push -u origin master"
+	elif [ $gitOption -eq 6 ]; then
+		echo "create copy of current branch and call it feature1"
+		echo "git branch feature1"
+	elif [ $gitOption -eq 7 ]; then
+		echo "switch to branch feature1"
+		echo "git checkout feature1"
+	elif [ $gitOption -eq 8 ]; then
+		echo "combination of above 2 actions"
+		echo "git checkout -b <new_branch_name>"
+	if [ $gitOption -eq 9 ]; then
+		echo "save local changes and push them to server"
+		echo "git add -A"
+		echo "gi commit -m "what are the lastest changes""
+		echo "git push"
 	elif [ $gitOption -eq 10 ]; then
 		echo "git fetch -> will download all the recent changes, but it will not put it in your current checked out code (working area)."
 		echo "git checkout origin/master -- path/to/file -> will checkout the particular file from the the downloaded changes (origin/master)."
