@@ -6,7 +6,7 @@ read option
 if [ $option -eq 1 ]; then
 	echo "du -sh *"
 elif [ $option -eq 2 ]; then
-	echo -e "\tCreate a repo [1]\n\tConfig git user name and email [2]\n\tGit add repo url [3]\n\tVerify git url [4]\n\tSet origin\\\\branch for upstream [5]\n\tCreate branch [6]\n\tSwitch branch  [7]\n\tCombo of above 2 commands [8]\n\tSave and commit changes [9]\n\tPull a single file from server repo [10]\n\tdiscard any local commits [11]\n\tdeleting branch [12]\n\tgit cleaning [13]\n\tmore info [14]"
+	echo -e "\tCreate a repo [1]\n\t\tConfig git user name and email [2]\n\t\tGit add repo url [3]\n\t\tVerify git url [4]\n\t\tSet origin\\\\branch for upstream [5]\n\tCreate branch [6]\n\tSwitch branch  [7]\n\tCombo of above 2 commands [8]\n\tSave and commit changes [9]\n\tPull a single file from server repo [10]\n\tdiscard any local commits [11]\n\tdeleting branch [12]\n\tgit cleaning [13]\n\tmore info [14]"
 	read gitOption
 	if [ $gitOption -eq 9 ]; then
 		echo "save local changes and push them to server"
@@ -46,8 +46,8 @@ elif [ $option -eq 2 ]; then
 		echo "git remote -v -> verifies new remote URL"
 		echo "git push -u origin master"
 	elif [ $gitOption -eq 10 ]; then
-		echo "git fetch -> git fetch will download all the recent changes, but it will not put it in your current checked out code (working area)."
-		echo "git checkout origin/master -- path/to/file -> //git checkout origin/master -- path/to/file will checkout the particular file from the the downloaded changes (origin/master)."
+		echo "git fetch -> will download all the recent changes, but it will not put it in your current checked out code (working area)."
+		echo "git checkout origin/master -- path/to/file -> will checkout the particular file from the the downloaded changes (origin/master)."
 	elif [ $gitOption -eq 11 ]; then
 		echo "git checkout master"
 		echo "git reset --hard origin/master"
