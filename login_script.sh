@@ -7,6 +7,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias vi='vim'
 
+alias git='time git'
+
 cd ~/GitHub/quickRef
 dir=`pwd`
 alias commands='$dir/commands.sh'
