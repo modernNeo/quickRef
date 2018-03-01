@@ -4,7 +4,10 @@ set -e
 ## REFERENCE PAGES                      ##
 ## https://askubuntu.com/a/865569       ##
 ## https://stackoverflow.com/a/44254088 ##
+## https://askubuntu.com/a/191391       ##
+## https://www.python.org/downloads/    ##
 ##########################################
+
 create_box (){
 	output="$@"
 	greatestLength=0
