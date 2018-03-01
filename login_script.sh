@@ -8,7 +8,7 @@ alias ...='cd ../..'
 alias vi='vim'
 
 cd ~/GitHub/quickRef
-dir=`pwd`
-alias commands='$dir/commands.sh'
+alias commands='~/GitHub/quickRef/commands.sh'
+alias git='~/GitHub/quickRef/git_command.sh'
 cd ~/
 echo "colorscheme desert" >> ~/.vimrc
