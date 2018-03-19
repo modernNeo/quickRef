@@ -39,7 +39,7 @@ if [ ${#vimBinPath} -eq 0 ]; then
   ## detect OS and install
     OS=`uname -s`
     if [ "$OS" = "Darwin" ]; then
-      echo "this appears to be a Mac, now attempting to install VIM"
+      echo "this appears to be a Mac, now attempting to install VIM with brew"
       brew install vim
       exitCode=`echo $?`
       if [ $exitCode -ne 0 ]; then

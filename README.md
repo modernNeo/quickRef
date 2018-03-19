@@ -16,6 +16,9 @@ Adds reference for
  * external hard drives [including Macbook] onto Arch  
  * Calls script that mount usb on WSL
   
+## install_and_setup_vim  
+Installs vim on [so far] Mac and sets up the colorscheme to be desert as the default vim colorscheme on most Linux systems sets the comments to a color that is hard to read. I will probably add support for Ubuntu and Arch in the near future  
+  
 ## connect_usb  
 Will display the different USB connected to the Windows and lets the user choose which device to mount to WSL
 
