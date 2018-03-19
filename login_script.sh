@@ -7,8 +7,7 @@ alias l='ls -alF'
 
 alias ..='cd ..'
 alias ...='cd ../..'
-alias vi='vim'
 
 alias commands='~/GitHub/quickRef/commands.sh'
 
-bash ~/GitHub/quickRef/install_and_setup_vim.sh
+. ~/GitHub/quickRef/install_and_setup_vim.sh

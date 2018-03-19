@@ -47,9 +47,11 @@ if [ ${#vimBinPath} -eq 0 ]; then
       else
         echo "vim successfully installed!"
         setup_vimrc
+        alias vi='vim'
       fi
     fi
   fi
 else
   setup_vimrc
+  alias vi='vim'
 fi
