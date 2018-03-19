@@ -1,5 +1,4 @@
-#!/bin/bash -e
-set -e
+#!/bin/bash
 
 setup_vimrc (){
   if [ -e ~/.vimrc ]; then
