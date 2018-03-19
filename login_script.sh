@@ -11,6 +11,22 @@ cd ~/GitHub/quickRef
 dir=`pwd`
 alias commands='$dir/commands.sh'
 cd ~/
-if [ ! -e ~/.vimrc ]; then
-	echo "colorscheme desert" >> ~/.vimrc
+if [ -e ~/.vimrc ]; then
+
+  my_array=()
+  while IFS= read -r line; do
+    my_array+=( "$line" )
+  done < <( cat ~/.vimrc )
+  alreadyThere=true
+  for index in `seq 0 ${#my_array[@]}`;
+  do
+    if [ "${my_array[index]}" = "colorscheme desert" ]; then
+      alreadyThere=false
+    fi
+  done
+  if [ $alreadyThere == true ]; then
+    echo "colorscheme desert" >> ~/.vimrc
+  fi
+else
+  echo "colorscheme desert" >> ~/.vimrc
 fi
