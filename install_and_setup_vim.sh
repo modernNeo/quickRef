@@ -41,13 +41,18 @@ if [ ${#vimBinPath} -eq 0 ]; then
       echo "this appears to be a Mac, now attempting to install VIM with brew"
       brew install vim
       exitCode=`echo $?`
-      if [ $exitCode -ne 0 ]; then
-        echo "the install command did not appear to work correctly, please investigate further"
-      else
-        echo "vim successfully installed!"
-        setup_vimrc
-        alias vi='vim'
-      fi
+    elif [ "$OS"  = "Linux" ]; then
+      echo "this appears to be a Linux system, now attemptingto install VIM"
+      sudo apt-get install -y vim
+      exitCode=`echo $?`
+    fi
+    if [ $exitCode -ne 0 ]; then
+      echo "the install command did not appear to work correctly, please investigate further"
+    else
+      echo "vim successfully installed!"
+      setup_vimrc
+      alias vi='vim'
+    fi
     fi
   fi
 else
