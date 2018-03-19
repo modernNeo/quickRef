@@ -7,11 +7,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias vi='vim'
 
-alias git='time git'
-
-cd ~/GitHub/quickRef
 alias commands='~/GitHub/quickRef/commands.sh'
-cd ~/
+
 if [ -e ~/.vimrc ]; then
 
   my_array=()
