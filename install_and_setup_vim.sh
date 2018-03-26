@@ -53,7 +53,6 @@ if [ ${#vimBinPath} -eq 0 ]; then
       setup_vimrc
       alias vi='vim'
     fi
-    fi
   fi
 else
   setup_vimrc
