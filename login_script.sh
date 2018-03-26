@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PS1="\d \A \u:\h\$(pwd) $"
+export PS1="\d \A \u:\h\$(pwd)\n $"
 
 alias ll='ls -l'
 alias la='ls -la'
