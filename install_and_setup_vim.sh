@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#function for setting up vimrc with:
+#   desert colorscheme
 setup_vimrc (){
   if [ -e ~/.vimrc ]; then
 
@@ -10,6 +12,7 @@ setup_vimrc (){
     alreadyThere=true
     for index in `seq 0 ${#my_array[@]}`;
     do
+      index="$(echo -e "${index}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
       if [ "${my_array[index]}" = "colorscheme desert" ]; then
         alreadyThere=false
       fi
@@ -50,6 +53,10 @@ if [ ${#vimBinPath} -eq 0 ]; then
       echo "the install command did not appear to work correctly, please investigate further"
     else
       echo "vim successfully installed!"
+
+      #setting vim as the default editor
+      VIM=`which vim`.basic
+      update-alternatives --set editor $VIM
       setup_vimrc
       alias vi='vim'
     fi
