@@ -6,7 +6,7 @@ read option
 if [ $option -eq 1 ]; then
 	echo "du -sh *"
 elif [ $option -eq 2 ]; then
-	echo -e "\tCreate a repo [1]\n\t\tConfig git user name and email [2]\n\t\tGit add repo url [3]\n\t\tVerify git url [4]\n\t\tSet origin\\\\branch for upstream [5]\n\tDetermine which branches are tracking what [6]\n\tCreate branch [7]\n\tSwitch branch  [8]\n\tCombo of above 2 commands [9]\n\tSave and commit changes [10]\n\tPull a single file from server repo [11]\n\tdiscard any local commits [12]\n\tdeleting branch [13]\n\tgit cleaning [14]\n\tmore info [15]"
+	echo -e "\tCreate a repo [1]\n\t\tConfig git user name and email [2]\n\t\tGit add repo url [3]\n\t\tVerify git url [4]\n\t\tSet origin\\\\branch for upstream [5]\n\tDetermine which branches are tracking what [6]\n\tCreate branch [7]\n\tSwitch branch  [8]\n\tCombo of above 2 commands [9]\n\tSwitching to the previous branch [10]\n\tSave and commit changes [11]\n\tPull a single file from server repo [12]\n\tdiscard any local commits [13]\n\tdeleting branch [14]\n\tgit cleaning [15]\n\tmore info [16]"
 	read gitOption
 	if [ $gitOption -eq 1 ]; then
 		echo "git init"
@@ -42,25 +42,28 @@ elif [ $option -eq 2 ]; then
 	elif [ $gitOption -eq 9 ]; then
 		echo "combination of above 2 actions"
 		echo "git checkout -b <new_branch_name>"
-	elif [ $gitOption -eq 10 ]; then
+	elif [ $gitOption -eq 10 ];then
+		echo "checking out the previously checkout out branch"
+		echo "\`git checkout\` - OR \`git checkout @{-1}\`"
+	elif [ $gitOption -eq 11 ]; then
 		echo "save local changes and push them to server"
 		echo "git add -A"
 		echo "gi commit -m "what are the lastest changes""
 		echo "git push"
-	elif [ $gitOption -eq 11 ]; then
+	elif [ $gitOption -eq 12 ]; then
 		echo "git fetch -> will download all the recent changes, but it will not put it in your current checked out code (working area)."
 		echo "git checkout origin/master -- path/to/file -> will checkout the particular file from the the downloaded changes (origin/master)."
-	elif [ $gitOption -eq 12 ]; then
+	elif [ $gitOption -eq 13 ]; then
 		echo "git checkout master"
 		echo "git reset --hard origin/master"
-	elif [ $gitOption -eq 13 ]; then
+	elif [ $gitOption -eq 14 ]; then
 		echo "git branch -D <local_branch>"
 		echo "git push origin --delete <remote_branch>"
-	elif [ $gitOption -eq 14 ]; then
+	elif [ $gitOption -eq 15 ]; then
 		echo "git clean -d -x -f"
 		echo "will remove untracked files, including directories (-d) and files ignored by git (-x). Replace the -f argument with -n to perform a dry-run or -i for interactive mode and it will tell you what will be removed."
 		echo "https://stackoverflow.com/a/675797"
-	elif [ $gitOption -eq 15 ]; then
+	elif [ $gitOption -eq 16 ]; then
 		echo "More Info: http://tutorialzine.com/2016/06/learn-git-in-30-minutes/"
 	fi
 elif [ $option -eq 3 ]; then

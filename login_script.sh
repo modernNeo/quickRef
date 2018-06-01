@@ -9,4 +9,3 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 alias commands='~/GitHub/quickRef/commands.sh'
-. ~/GitHub/quickRef/install_and_setup_vim.sh
