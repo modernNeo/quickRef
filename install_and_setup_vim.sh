@@ -22,7 +22,13 @@ setup_vimrc (){
     echo "Setting up the desert colorscheme as the default colorscheme for vim"
     echo "colorscheme desert" >> ~/.vimrc
   fi
-  sudo update-alternatives --set editor /usr/bin/vim.basic
+
+
+  editor=`ll /etc/alternatives/editor | awk '{ print $11 }'`
+  if [ $editor != "/usr/bin/vim.basic" ]; then
+    echo "updating editor to vim"
+    sudo update-alternatives --set editor /usr/bin/vim.basic
+  fi
 }
 
 vimBinPath=`which vim`
