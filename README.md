@@ -24,3 +24,11 @@ Will display the different USB connected to the Windows and lets the user choose
 
 ## update_python
 script for updating pythion to 3.6 on the currently supported Ubuntu OS [as for Feb 11]
+  
+## discord_automated_message
+for sending automated messages to a channel on discord using python
+Things the script needs  
+ 1. channel id
+ 2. username and password of the user or bot
+ 3. python3.5 +
+If you are running this on Mac, you may encounter an SSL error [that this PR outlines how to fix](https://github.com/Cog-Creators/Red-DiscordBot/issues/581)
