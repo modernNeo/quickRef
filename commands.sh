@@ -6,7 +6,7 @@ read option
 if [ $option -eq 1 ]; then
 	echo "du -sh *"
 elif [ $option -eq 2 ]; then
-	echo -e "\tCreate a repo [1]\n\t\tConfig git user name and email [2]\n\t\tGit add repo url [3]\n\t\tVerify git url [4]\n\t\tSet origin\\\\branch for upstream [5]\n\tDetermine which branches are tracking what [6]\n\tCreate branch [7]\n\tSwitch branch  [8]\n\tCombo of above 2 commands [9]\n\tSwitching to the previous branch [10]\n\tSave and commit changes [11]\n\tPull a single file from server repo [12]\n\tdiscard any local commits [13]\n\tdeleting branch [14]\n\tgit refresh remote branches[15]\n\tgit cleaning [16]\n\tmore info [17]"
+	echo -e "\tCreate a repo [1]\n\t\tConfig git user name and email [2]\n\t\tGit add repo url [3]\n\t\tVerify git url [4]\n\t\tSet origin\\\\branch for upstream [5]\n\tDetermine which branches are tracking what [6]\n\tCreate branch [7]\n\tSwitch branch  [8]\n\tCombo of above 2 commands [9]\n\tSwitching to the previous branch [10]\n\tSave and commit changes [11]\n\tPull a single file from server repo [12]\n\tdiscard any local commits [13]\n\tdeleting branch [14]\n\tgit refresh remote branches [15]\n\tgit cleaning [16]\n\tmore info [17]"
 	read gitOption
 	if [ $gitOption -eq 1 ]; then
 		echo "git init"
