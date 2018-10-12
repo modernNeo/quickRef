@@ -1,1 +1,0 @@
-echo -e `cat cogs.json | jq '.gitOptions[0].description[0]' -r`
