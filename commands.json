@@ -1,0 +1,23 @@
+{ "commands" : 
+	[
+		{"name": "listing files", "description": ["du -sh *"], "exec": false},
+		{"name":"git", "description": ["-"], "exec": false},
+		{"name":"AUR install", "description": [
+			"Download snapshot link",
+			"wget https://aur.archlinux.org/cgit/aur.git/snapshot/dropbox.tar.gz",
+			"tar xvf dropbox.tar.gz",
+			"makepkg",
+			"sudo pacman -U dropbox-23.4.18-1-x86_64.pkg.tar.xz",
+			"https://www.youtube.com/watch?v=xXpO6jsbrF0&t=611s"
+			], "exec": false
+		},
+		{"name":"mount external", "description": [
+			"lsblk -f",
+			"sudo mount UUID=5b09bc13-41e4-350f-b021-e1c5e59940fb /mnt/jason-hard_drive/"
+		], "exec": false},
+		{"name":"mounbt macbook", "description": [
+			"sudo mount -t cifs //192.168.1.64/Macintosh\\ HD /mnt/jason-macbook -o user=\"Jason Manshad\""
+		], "exec": false},
+		{"name":"Mount USB to WSL", "description": ["~/GitHub/quickRef/connect_usb.sh"], "exec": true}	
+	]
+}
