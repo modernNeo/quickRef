@@ -31,7 +31,7 @@ Do a search for `DocumentRoot`, comment `DocumentRoot` and `<Directory` and put 
 ## Fixing issues with "Permission to file not allowed"  
 
 [for reference](https://coolestguidesontheplanet.com/forbidden-403-you-dont-have-permission-to-access-username-on-this-server/)  
-`sudo vim /etc/apache2/httpd.conf``
+`sudo vim /etc/apache2/httpd.conf`
 
 comment out existing  
 ```shell
@@ -47,8 +47,8 @@ Group staff
 ## Fixing issues with "Permission to file not allowed"  
 [for reference](https://coolestguidesontheplanet.com/forbidden-403-you-dont-have-permission-to-access-username-on-this-server/)  
 
-Check to to see if there is a file under `etc/apache2/users/` that is called <your_short_name>.conf
-If there is not, make a file that does contain that convention, <your_short_name> is your username which can be determined with the command `whoami`
+Check to to see if there is a file under `etc/apache2/users/` that is called `<your_short_name>.conf`
+If there is not, make a file that does contain that convention, `<your_short_name>` is your username which can be determined with the command `whoami`
 
 the contents of the file should be
 ```shell
