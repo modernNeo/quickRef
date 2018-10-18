@@ -3,7 +3,7 @@
 ### Common commands after each change:
 
 #### Restart Apache
-`sudo apachectl restart1`
+`sudo apachectl restart`
 
 ### Apache syntax check
 `apachectl -t`
