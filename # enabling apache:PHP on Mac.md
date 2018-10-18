@@ -15,7 +15,7 @@
 
 `sudo vim /etc/apache2/httpd.conf`
 
-Do a search for PHP and then uncomment `LoadModule php7_module libexec/apache2/libphp7.so` and uncomment it.
+Do a search for PHP to find line `LoadModule php7_module libexec/apache2/libphp7.so` and uncomment it.
 
 ## Specify the root folder
 
@@ -24,8 +24,8 @@ Do a search for PHP and then uncomment `LoadModule php7_module libexec/apache2/l
 `sudo vim /etc/apache2/httpd.conf`
 
 Do a search for `DocumentRoot`, comment `DocumentRoot` and `<Directory` and put in
-`DocumentRoot "<root folder>"`
-`<Directory "<root folder>">`
+ 1. `DocumentRoot "<root folder>"`
+ 2. `<Directory "<root folder>">`
 
 
 ## Fixing issues with "Permission to file not allowed"  
