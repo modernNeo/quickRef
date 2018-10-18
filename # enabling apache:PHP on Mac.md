@@ -6,32 +6,32 @@
 `sudo apachectl restart`
 
 ### Apache syntax check
-`apachectl -t`
+`apachectl -t`  
 `sudo apachectl configtest`
 
 ## Turning on PHP
 
-https://websitebeaver.com/set-up-localhost-on-macos-high-sierra-apache-mysql-and-php-7-with-sslhttps#turn-on-php
+[for reference](https://websitebeaver.com/set-up-localhost-on-macos-high-sierra-apache-mysql-and-php-7-with-sslhttps#turn-on-php)  
 
-sudo nano /etc/apache2/httpd.conf
+`sudo vim /etc/apache2/httpd.conf`
 
 Do a search for PHP and then uncomment `LoadModule php7_module libexec/apache2/libphp7.so` and uncomment it.
 
 ## Specify the root folder
 
-https://websitebeaver.com/set-up-localhost-on-macos-high-sierra-apache-mysql-and-php-7-with-sslhttps#create-sites-folder
+[for reference](https://websitebeaver.com/set-up-localhost-on-macos-high-sierra-apache-mysql-and-php-7-with-sslhttps#create-sites-folder)  
 
-sudo nano /etc/apache2/httpd.conf
+`sudo vim /etc/apache2/httpd.conf`
 
-Do a search for `DocumentRoot`, uncomment `DocumentRoot` and `<Directory` and put in
+Do a search for `DocumentRoot`, comment `DocumentRoot` and `<Directory` and put in
 `DocumentRoot "<root folder>"`
 `<Directory "<root folder>">`
 
 
 ## Fixing issues with "Permission to file not allowed"  
 
-for reference: https://coolestguidesontheplanet.com/forbidden-403-you-dont-have-permission-to-access-username-on-this-server/
-sudo vim /etc/apache2/httpd.conf
+[for reference](https://coolestguidesontheplanet.com/forbidden-403-you-dont-have-permission-to-access-username-on-this-server/)  
+`sudo vim /etc/apache2/httpd.conf``
 
 comment out existing  
 ```shell
@@ -45,7 +45,7 @@ Group staff
 ```
 
 ## Fixing issues with "Permission to file not allowed"  
-https://coolestguidesontheplanet.com/forbidden-403-you-dont-have-permission-to-access-username-on-this-server/
+[for reference](https://coolestguidesontheplanet.com/forbidden-403-you-dont-have-permission-to-access-username-on-this-server/)  
 
 Check to to see if there is a file under `etc/apache2/users/` that is called <your_short_name>.conf
 If there is not, make a file that does contain that convention, <your_short_name> is your username which can be determined with the command `whoami`
