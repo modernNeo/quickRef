@@ -3,6 +3,7 @@
 		{"name": "discord local commits", "description": ["git reset --hard origin/<branch_name>"]},
 		{"name": "unstage any staged changes for the given file(s)", "description": ["git reset -- <filePath>"]},
 		{"name": "viewing unpushed git commits", "description": ["\"git log origin/master..HEAD\" or \"git diff origin/master..HEAD\""]},
+		{"name": "pruning remote branches", "description": ["git remote prune origin"]},
 		{"name":"Create a repo", "description": [
 				"git init",
 				"git config --local user.name \"Jace Manshadi\"",
