@@ -8,4 +8,4 @@ alias l='ls -alF'
 alias ..='cd ..'
 alias ...='cd ../..'
 
-alias commands='~/GitHub/quickRef/commands.sh'
+alias commands="~/$1/quickRef/commands.sh $1"
