@@ -1,6 +1,6 @@
 #!/bin/bash
-COMMAND_FILE_LOCATION="$HOME/GitHub/quickRef/commands.json"
-GIT_FILE_LOCATION="$HOME/GitHub/quickRef/gitOptions.json"
+COMMAND_FILE_LOCATION="$HOME/$1/quickRef/commands.json"
+GIT_FILE_LOCATION="$HOME/$1/quickRef/gitOptions.json"
 
 create_array_of_quickref_names(){
 	index=0
