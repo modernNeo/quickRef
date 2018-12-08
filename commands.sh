@@ -1,6 +1,9 @@
 #!/bin/bash
-COMMAND_FILE_LOCATION="$HOME/$1/quickRef/commands.json"
-GIT_FILE_LOCATION="$HOME/$1/quickRef/gitOptions.json"
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+
+COMMAND_FILE_LOCATION="$DIR/commands.json"
+GIT_FILE_LOCATION="$DIR/gitOptions.json"
 
 create_array_of_quickref_names(){
 	index=0
