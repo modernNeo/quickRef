@@ -8,4 +8,6 @@ alias l='ls -alF'
 alias ..='cd ..'
 alias ...='cd ../..'
 
-alias commands="~/$1/quickRef/commands.sh $1"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+
+alias commands="$DIR/commands.sh"
