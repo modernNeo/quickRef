@@ -22,7 +22,7 @@ sudo apt-get update
 sudo apt-get install -y libssl1.0-dev openssl build-essential checkinstall libpam0g-dev
 /tmp/pam_ssh_agent_auth-0.10.3/configure --libexecdir=/lib/security --with-mantype=man
 make
-sudo checkinstall #Press enter 3 times
+sudo checkinstall -y
 
 sudo bash -c "echo \"Defaults        env_keep += SSH_AUTH_SOCK\" >> /etc/sudoers"
 sudo bash -c "echo \"Defaults        timestamp_timeout=0\" >> /etc/sudoers"
