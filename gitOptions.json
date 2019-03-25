@@ -25,8 +25,11 @@
 			"git config --global user.email \"j_manshad@sfu.ca\""
 			]
 		},
+		{"name":"amending most recent commit message", "description": [
+			"git commit --amend -m \"message\""]},
 		{"name":"Git add repo url", "description": ["git remote add origin *remote repository URL*"]},
 		{"name":"Verify git url", "description": ["git remote -v -> verifies new remote URL"]},
+		{"name":"Git ignore file mode change", "description": ["git config --local core.fileMode false"]},
 		{"name":"Set origin\\\\branch for upstream", "description": ["git branch --set-upstream-to origin/branch"]},
 		{"name":"Determine which branches are tracking what", "description": ["git branch -vv"]},
 		{"name":"Create branch", "description": [
