@@ -40,7 +40,7 @@ Installs vim on [so far] Mac and sets up the colorscheme to be desert as the def
 Will display the different USB connected to the Windows and lets the user choose which device to mount to WSL
 
 ## update_python
-script for updating pythion to 3.6 on the currently supported Ubuntu OS [as for Feb 11]
+script for updating pythion to 3.6 on the currently supported Ubuntu OS [as for Feb 11, 2018]
   
 ## discord_automated_message
 for sending automated messages to a channel on discord using python
