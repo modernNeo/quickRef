@@ -69,6 +69,9 @@
 		{"name":"deleting branch", "description": [
 			"git branch -D <local_branch>",
 			"git push origin --delete <remote_branch>"
-		]}		
+		]},
+		{"name":"checking out PRs locally", "description": [
+			"git fetch origin pull/1234/head:pr-1234"
+		]}
 	]
 }
