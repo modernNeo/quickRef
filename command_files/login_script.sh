@@ -9,5 +9,6 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+vim -c 'set clipboard=unnamedplus'
 
 alias commands="$DIR/commands.sh"
