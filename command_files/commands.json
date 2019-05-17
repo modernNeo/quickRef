@@ -15,9 +15,11 @@
 			"lsblk -f",
 			"sudo mount UUID=5b09bc13-41e4-350f-b021-e1c5e59940fb /mnt/jason-hard_drive/"
 		], "exec": false},
-		{"name":"mounbt macbook", "description": [
+		{"name":"mount macbook", "description": [
 			"sudo mount -t cifs //192.168.1.64/Macintosh\\ HD /mnt/jason-macbook -o user=\"Jason Manshad\""
 		], "exec": false},
+		{"name": "list processes running on a given port", "description": [
+			"lsof -i :<portNumber> | grep LISTEN"], "exec": "false"},
 		{"name":"Mount USB to WSL", "description": ["~/GitHub/quickRef/connect_usb.sh"], "exec": true}	
 	]
 }
