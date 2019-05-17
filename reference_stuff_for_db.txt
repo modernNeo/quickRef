@@ -1,0 +1,81 @@
+Arch
+sudo vim /var/lib/postgres/data/pg_hba.conf
+sudo systemctl status postgresql.service
+sudo systemctl restart postgresql.service
+
+Ubuntu
+sudo vim /etc/postgresql/10/main/pg_hba.conf
+sudo systemctl status postgresql.service
+sudo systemctl restart postgresql.service
+
+
+
+https://www.postgresql.org/docs/9.3/auth-pg-hba-conf.html
+
+-h == host TYPE
+
+
+jace@tester-db:~$ 
+psql -U postgres -h 127.0.0.1 -W 
+host    all             all             127.0.0.1/32            md5
+
+psql -U postgres -h 127.0.0.1
+host    all             all             127.0.0.1/32            md5
+
+psql -U postgres -W #doesnt log me in, password authentication not working
+local   all             all                                     peer
+
+psql -U postgres #doesnt log me in, not asking for password
+local   all             all                                     peer
+
+psql -d postgres_db -U tester -h 127.0.0.1 -W
+host    all             all             127.0.0.1/32            md5
+
+psql -d postgres_db -U tester -h 127.0.0.1
+host    all             all             127.0.0.1/32            md5
+
+psql -d postgres_db -U tester -W #doesn't log me in, password authentication not working
+local   all             all                                     peer
+
+psql -d postgres_db -U tester #doesn't log me in, not asking for password
+local   all             all                                     peer
+
+
+
+postgres@tester-db:~$
+psql -U postgres -h 127.0.0.1 -W 
+host    all             all             127.0.0.1/32            md5
+
+psql -U postgres -h 127.0.0.1
+host    all             all             127.0.0.1/32            md5
+
+psql -U postgres -W # access is being granted, regardless of what is entered
+local   all             postgres                                peer
+
+psql -U postgres # access is being granted, no password is even asked for
+local   all             postgres                                peer
+
+psql -d postgres_db -U tester -h 127.0.0.1 -W
+host    all             all             127.0.0.1/32            md5
+
+psql -d postgres_db -U tester -h 127.0.0.1
+host    all             all             127.0.0.1/32            md5
+
+psql -d postgres_db -U tester -W #password authentication not working
+local   all             all                                     peer
+
+psql -d postgres_db -U tester #not asking for password and not correctly authenticating
+local   all             all                                     peer
+
+-------------------------------
+
+local   all             postgres                                peer
+
+# TYPE  DATABASE        USER            ADDRESS                 METHOD
+
+# "local" is for Unix domain socket connections only
+local   all             all                                     peer
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            md5
+# IPv6 local connections:
+host    all             all             ::1/128                 md5

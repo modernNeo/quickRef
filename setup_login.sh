@@ -11,7 +11,7 @@ sudo chmod 0600 /home/jace/.ssh/authorized_keys
 
 sudo update-alternatives --set editor /usr/bin/vim.basic
 
-sudo bash -c "echo \" ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDDG7Wq4j/1AK0L7mVqCnbFcmozV7F17KmbJxWTvSQ6/cyPNarXgQ+2HEwJ4p2dcRPmFQbGQs55Ykiv0ge5Ioj3htf2sePV6vChzjD/KF3ltSemmMdweJWUhzt7TLGu6ldsX2ntXuzqBw67/EoDXnIYxylJjLCyOTN4L16yMIqJKowi0xQKVwdL8Z4I0H8ypvAWbwxj326QMqycpeXK1AsjzOsupPEBlTUgvJn30TeFIXWcGK4jl1oNdRVIKsR+BfLMGTcL7u4nGSpNE2p7fe37ApAkR4OwoSMo3v0NAnTuuvyGkeLWe0+6JC92w41QvidEaW+kJnt0qZTmMG6+Zb3avSPrjnMXD9iJcmsKooL6qytqHMLy4Si8hmEpkdQl/BcFluKG02N6pXH5lVR11wmrBBmd1nEebEHGG3AYA2DQbxBCgl5bjiVOzjwX976KRCZml24mHabvN0weiG8cMcF3mcajvlHwK5nDIviVcdaqAbCcqQeds+22UFTYr5hQ0gQNnyz/o6k4KZA/nJYGhpGDthy+KucLjTHOSeimmwqC4fncrdeg9n5I5wx7m8MzR5Txxh0awqg2PMrX4VqEpuNo4soebm2nit+yVCA3QFutDpA8HpS+RbiOMA0RX8Otdc4zl3RYoE9LILyNWzZ5JP/CRKEYbC/SkYxliCOZNdQkQQ== jace@jace_arch\" >> /home/jace/.ssh/authorized_keys"
+#ask me for my public key
 
 wget "http://downloads.sourceforge.net/project/pamsshagentauth/pam_ssh_agent_auth/v0.10.3/pam_ssh_agent_auth-0.10.3.tar.bz2" -P /tmp
 
