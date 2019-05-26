@@ -7,7 +7,7 @@ alias la='ls -la'
 alias l='ls -alF'
 alias ..='cd ..'
 alias ...='cd ../..'
-
+HISTTIMEFORMAT='%Y-%m-%d %T '
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
 alias vim="vim -c \"set clipboard=unnamedplus\""
