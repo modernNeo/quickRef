@@ -11,5 +11,7 @@ sudo chmod 700 /home/jace/.ssh
 sudo chmod 0600 /home/jace/.ssh/authorized_keys
 cat ~/.ssh/authorized_keys >> /home/jace/.ssh/authorized_keys
 echo 'jace ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
+sudo echo 'PubkeyAuthentication yes' >> /etc/ssh/sshd_config
+sudo systemctl restart sshd
 sudo apt-get install -y vim
 sudo update-alternatives --set editor /usr/bin/vim.basic
