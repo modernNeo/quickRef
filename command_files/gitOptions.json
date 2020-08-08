@@ -72,6 +72,11 @@
 		]},
 		{"name":"checking out PRs locally", "description": [
 			"git fetch origin pull/1234/head:pr-1234"
+		]},
+		{"name": "undo git commits","description": [
+			"git reset --soft HEAD~ //opposite of git commit -m ",
+			"git reset HEAD <FILE_PATH> //opposite of git add",
+			"git checkout <FILE_PATH> //undo local changed"
 		]}
 	]
 }
