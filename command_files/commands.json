@@ -77,6 +77,15 @@
 					"sudo mount -t nfs -o nfsvers=4.1 jace-cloud.local:/volume1/NAS_Documents /home/jace/NAS_Documents"
 				],
 			"exec" : false
+		},
+		{
+			"name":"Unmount a busy device",
+			"description":
+				[
+					"umount -l /PATH/OF/BUSY-DEVICE",
+					"umount -f /PATH/OF/BUSY-NFS"
+				],
+			"exec": false
 		}
 	]
 }

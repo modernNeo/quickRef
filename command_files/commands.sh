@@ -49,7 +49,7 @@ done
 
 #reads the option that the user wants and determines if it is a regular option selected or a git option that requires further work
 read option
-if [ $option -ne 2 ]; then
+if [ $option -ne 4 ]; then
 	print_specified_index "$COMMAND_FILE_LOCATION" "commands" $((option-1))
 	exit
 fi
