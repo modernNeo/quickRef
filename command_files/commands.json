@@ -86,6 +86,16 @@
 					"umount -f /PATH/OF/BUSY-NFS"
 				],
 			"exec": false
+		},
+		{
+			"name":"install tar.gz program",
+			"description":
+				[
+					"sudo tar -xvf program.tar.gz -C /opt/",
+					"sudo ln -sf /opt/path/to/executable/file /usr/bin/program",
+					"vim ~/.local/share.applications/program.desktop //to create desktop entry"
+				],
+				"exec": "false"
 		}
 	]
 }
