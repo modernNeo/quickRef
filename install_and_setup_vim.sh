@@ -20,17 +20,19 @@ setup_vimrc (){
     if [ $alreadyThere == true ]; then
       echo "Setting up the desert colorscheme as the default colorscheme for vim"
       echo "colorscheme desert" >> ~/.vimrc
+      echo "set clipboard=unnamedplus" >> ~/.vimrc
     fi
   else
     echo "Setting up the desert colorscheme as the default colorscheme for vim"
     echo "colorscheme desert" >> ~/.vimrc
+    echo "set clipboard=unnamedplus" >> ~/.vimrc
   fi
 
 
   editor=`ll /etc/alternatives/editor | awk '{ print $11 }'`
   if [ $editor != "/usr/bin/vim.basic" ]; then
     echo "updating editor to vim"
-    sudo update-alternatives --set editor /usr/bin/vim.basic
+    sudo update-alternatives --set editor /usr/bin/vim
   fi
 }
 
