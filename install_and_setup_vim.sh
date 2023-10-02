@@ -56,7 +56,7 @@ install_vim(){
         exitCode=`echo $?`
       elif [ "$OS"  = "Linux" ]; then
         echo "this appears to be a Linux system, now attemptingto install VIM"
-        sudo apt-get install -y vim
+        sudo apt-get install -y vim vim-gtk
         exitCode=`echo $?`
       fi
       if [ $exitCode -ne 0 ]; then
