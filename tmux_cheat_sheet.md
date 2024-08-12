@@ -1,10 +1,14 @@
 # TMUX Cheat Sheet
 
-1. Show windows tab at top
-in `~/.tmux.conf`
+`~/.tmux.conf`
 ```bash
+# Show windows tab at top
 set-option -g status-position top
+
+# makes tmux copy to clipboard: https://unix.stackexchange.com/a/131187
+bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
 ```
+
 |                 Session Management | Pane Management         |
 |------------------------------------|-------------------------|
 |**Creates session with name “foobar”**<br>tmux new -s “foobar”<br>**creates new session and window**<br>tmux new -t “stacy”<br>**detach from session**<br>Ctrl + B, D<br>**retach to previously connected session**<br>tmux a<br>**list sessions**<br>tmux ls<br>**attach to session “0”**<br>tmux a -t 0<br>**kills session bob**<br>tmux kill-session -t bob<br>**kills all sessions**<br>tmux kill-server|**creates new vertical pane**<br>Ctrl + b, %<br>**creates new horizontal pane**<br>Ctrl + b,  “<br>**shows pane index**<br>Ctrl + b, Q<br>**switch to specified pane**<br>Ctrl + b, Q, <index><br>**change size of pane with directional arrows**<br>Ctrl+b, Ctrl<br>**last one but bigger resize steps**<br>Ctrl+b, ALT<br>**use a preset pane layout**<br>Ctrl+b, Alt+<number><br>**opens “kill” mode for pane**<br>Ctrl+b, X|
